@@ -1,4 +1,6 @@
 AdsRb::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
 
   get "pages/contact"
@@ -61,7 +63,9 @@ AdsRb::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  match '/about', :to=>'pages#about'
-  match '/contact', :to=>'pages#contact'
+  match '/onas', :to=>'pages#about'
+  match '/kontakt', :to=>'pages#contact'
   match '/', :to=>'pages#home'
+  match '/logowanie', :to=>'users#new'
+  match '/rejestracja', :to=>'users#new'
 end

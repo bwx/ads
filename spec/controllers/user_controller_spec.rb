@@ -1,10 +1,9 @@
-require "rspec"
+require 'spec_helper'
 
-describe "My behaviour" do
-
-  it "should do something" do
-
-    #To change this template use File | Settings | File Templates.
-    true.should == false
-  end
+describe UsersController do
+  describe "GET 'new'" do
+    it "should be successful" do
+      get 'new'
+      response.should be_success
+    end end
 end
