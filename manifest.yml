@@ -1,0 +1,17 @@
+--- 
+applications: 
+  .: 
+    infra: eu-aws
+    name: adsrb
+    instances: 1
+    mem: 256M
+    url: ${name}.${target-base}
+    services: 
+      adsrb-mysql-33275: 
+        type: mysql
+    framework: 
+      name: rails3
+      info: 
+        description: Rails Application
+        mem: 256M
+        exec: 
